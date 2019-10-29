@@ -74,6 +74,7 @@ public class CreateAccount {
 //        this.driver = driver;
 //    }
 
+    
     public CreateAccount openMainPage(){
         this.driver.navigate().to(MAIN_PAGE_URL);
         return this;
