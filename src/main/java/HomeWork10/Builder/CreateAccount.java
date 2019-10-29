@@ -73,6 +73,7 @@ public class CreateAccount {
 //    public CreateAccount(WebDriver driver) {
 //        this.driver = driver;
 //    }
+    
 
     public CreateAccount openMainPage(){
         this.driver.navigate().to(MAIN_PAGE_URL);
