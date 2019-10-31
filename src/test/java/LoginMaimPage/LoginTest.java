@@ -46,6 +46,7 @@ public class LoginTest {
                 {"tyschenko.evgeniy57@gmail.com", "12345"}
         };
     }
+    
     @AfterMethod
     public void tearDown() {
         driver.manage().deleteAllCookies();
