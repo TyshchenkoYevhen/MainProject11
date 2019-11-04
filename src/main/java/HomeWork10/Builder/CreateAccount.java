@@ -100,7 +100,6 @@ public class CreateAccount {
         return this;
     }
 
-
     public void enterEmail () {
         emailField.sendKeys("tyschenko.evgeniy58@gmail.com");
     }

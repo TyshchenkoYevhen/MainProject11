@@ -15,7 +15,6 @@ public class TestCreateAccount {
     private WebDriver driver;
     private CreateAccount account;
 
-
     @Before
     public void settings() {
         System.setProperty("webdriver.chrome.driver", "d:\\install\\chromedriver_win32\\chromedriver.exe");
