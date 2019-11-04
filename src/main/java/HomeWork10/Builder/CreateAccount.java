@@ -8,11 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CreateAccount {
 
+    private static final String MAIN_PAGE_URL ="http://automationpractice.com";
+    private WebDriver driver;
 
-    private static final String MAIN_PAGE_URL = "http://automationpractice.com";
-    public WebDriver driver;
-
-    private Account account ;
+    private Account account;
 
     @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?controller=my-account']")
     private WebElement signIn;
@@ -68,9 +67,9 @@ public class CreateAccount {
     @FindBy (xpath = "//div[@id='center_column']/div")
     private WebElement alertMes;
 
-   public CreateAccount(WebDriver driver) {
-       this.driver = driver;
-       PageFactory.initElements(driver, this);
+    public CreateAccount(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
 
         account = new Account.Builder()
                 .withCustFirstName("Frank")
@@ -87,15 +86,20 @@ public class CreateAccount {
                 .build();
     }
 
-     public CreateAccount openMainPage(){
-         this.driver.navigate().to(MAIN_PAGE_URL);
-          return this;
-     }
+//    public CreateAccount(WebDriver driver) {
+//        this.driver = driver;
+//    }
+
+    public CreateAccount openMainPage(){
+        this.driver.navigate().to(MAIN_PAGE_URL);
+        return this;
+    }
 
     public CreateAccount openRegistetionForm(){
         signIn.click();
         return this;
     }
+
 
     public void enterEmail () {
         emailField.sendKeys("tyschenko.evgeniy58@gmail.com");
