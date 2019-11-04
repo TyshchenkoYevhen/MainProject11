@@ -8,9 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CreateAccount {
 
-    private static final String MAIN_PAGE_URL ="http://automationpractice.com";
-    private WebDriver driver;
 
+    private static final String MAIN_PAGE_URL = "http://automationpractice.com";
+    public WebDriver driver;
+
+    private Account account ;
 
     @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?controller=my-account']")
     private WebElement signIn;
@@ -66,28 +68,37 @@ public class CreateAccount {
     @FindBy (xpath = "//div[@id='center_column']/div")
     private WebElement alertMes;
 
-    public CreateAccount(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+   public CreateAccount(WebDriver driver) {
+       this.driver = driver;
+       PageFactory.initElements(driver, this);
+
+        account = new Account.Builder()
+                .withCustFirstName("Frank")
+                .withCustLastName("Lampard")
+                .withEmailRegistr("tyshchenko.yevhen57@gmail.com")
+                .withFirstName("Frank")
+                .withLastName("Lampard")
+                .withCompanyName("CT")
+                .withAddress("address")
+                .withCityName("Kiew")
+                .withPostCode("07400")
+                .withPhoneMobile("80670000000")
+                .withAlias("alias")
+                .build();
     }
 
-//    public CreateAccount(WebDriver driver) {
-//        this.driver = driver;
-//    }
-    
-
-    public CreateAccount openMainPage(){
-        this.driver.navigate().to(MAIN_PAGE_URL);
-        return this;
-    }
+     public CreateAccount openMainPage(){
+         this.driver.navigate().to(MAIN_PAGE_URL);
+          return this;
+     }
 
     public CreateAccount openRegistetionForm(){
         signIn.click();
         return this;
     }
 
-
     public void enterEmail () {
-        emailField.sendKeys("tyschenko.evgeniy57@gmail.com");
+        emailField.sendKeys("tyschenko.evgeniy58@gmail.com");
     }
 
     public CreateAccount createAccount (){
@@ -100,47 +111,47 @@ public class CreateAccount {
         return this;
     }
     public void enterFirstName () {
-        custFirstName.sendKeys("Saler");
+        custFirstName.sendKeys(account.getCustFirstName());
 
     }
     public void enterLastName () {
-        custLastName.sendKeys("John ");
+        custLastName.sendKeys(account.getCustLastName());
 
     }
     public void enterEmailAgain () {
-        emailRegistr.sendKeys("tyschenko.evgeniy57@gmail.com");
+        emailRegistr.sendKeys(account.getEmailRegistr());
 
     }
     public void firstName (){
-        firstName.sendKeys("Yevhen");
+        firstName.sendKeys(account.getFirstName());
 
     }
     public void lastName (){
-        lastName.sendKeys("Yevhen");
+        lastName.sendKeys(account.getLastNAme());
     }
 
     public void company (){
-        companyName.sendKeys("CT");
+        companyName.sendKeys(account.getCompanyName());
 
     }
     public void address (){
-        addressData.sendKeys("address");
+        addressData.sendKeys(account.getAddress());
 
     }
     public void city (){
-        cityName.sendKeys("Kiew");
+        cityName.sendKeys(account.getCityName());
 
     }
     public void zipPostal (){
-        postCode.sendKeys("Post Code");
+        postCode.sendKeys(account.getPostCode());
 
     }
     public void mobile (){
-        phoneMobile.sendKeys("+380670000000");
+        phoneMobile.sendKeys(account.getPhoneMobile());
 
     }
     public void aliasForFutureReference (){
-        alias.sendKeys("alias");
+        alias.sendKeys(account.getAlias());
 
     }
     public CreateAccount registration (){

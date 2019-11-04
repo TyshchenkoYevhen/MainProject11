@@ -8,10 +8,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class WebDriverFactory {
 
-
-    private WebDriverFactory() {
-    }
-
     public static WebDriver getDriver(DriverType type) {
 
         switch (type) {

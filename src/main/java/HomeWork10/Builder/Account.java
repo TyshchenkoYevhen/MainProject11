@@ -1,9 +1,55 @@
 package HomeWork10.Builder;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
 import java.util.Set;
 
 public class Account {
+    public String getCustFirstName() {
+        return custFirstName;
+    }
+
+    public String getCustLastName() {
+        return custLastName;
+    }
+
+    public String getEmailRegistr() {
+        return emailRegistr;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastNAme() {
+        return lastNAme;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public String getPostCode() {
+        return postCode;
+    }
+
+    public String getPhoneMobile() {
+        return phoneMobile;
+    }
+
+    public String getAlias() {
+        return alias;
+    }
+
     private String custFirstName;
     private String custLastName;
     private String emailRegistr;
@@ -15,7 +61,6 @@ public class Account {
     private String postCode;
     private String phoneMobile;
     private String alias;
-
 
     public static class Builder {
         private Account newAccount;

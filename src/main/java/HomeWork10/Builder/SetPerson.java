@@ -1,6 +1,6 @@
 package HomeWork10.Builder;
 
-public class Main {
+public class SetPerson {
      Account myAccount = new Account.Builder()
              .withCustFirstName("John")
              .withCustLastName("Terry")
