@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/GitHubJava/MainProject11">
+        <classes>
+            <class name="AddFoodToCart.AddFoodTest">
+                <methods>
+                    <include name="testOpenMainPage"/>
+                    <include name="testFindSearchField"/>
+                    <include name="testEnterBlouse"/>
+                    <include name="testExecSearch"/>
+                    <include name="testSwitchList"/>
+                    <include name="testAddToCart"/>
+                    <include name="testProcesedToCheckout"/>
+                    <include name="testIncreaseQuantity"/>
+                </methods>
+            </class>
+<!--            <class name="LoginMaimPage.LoginTest">-->
+<!--                <methods><include name="enterMail"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="MainPage.MainPageTest">-->
+<!--                <methods>-->
+<!--                    <include name="testOpenMainPage"/>-->
+<!--                    <include name="DressButton"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="Number.NumberTestTest">-->
+<!--                <methods>-->
+<!--                    <include name="sum"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="ShowDressBanner.ShowBannerTest">-->
+<!--                <methods><include name="testMethod"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="ShowStoreInfo.StoreInfoTest">
+                <methods>
+                    <include name="testDisplayBlockStoreInfo"/>
+<!--                    <include name="testDisplayCategories"/>-->
+                    <include name="testDisplayInformation"/>
+<!--                    <include name="testDisplayMyAccount"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
