@@ -38,6 +38,4 @@ public class ShowBannerTest {
         driver.manage().deleteAllCookies();
         driver.close();
     }
-
-
 }
